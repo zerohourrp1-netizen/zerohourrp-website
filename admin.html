@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zero Hour RP Control Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body>
+  <header class="panel-header">
+    <a href="index.html" class="panel-brand">ZERO <b>HOUR</b> RP</a>
+    <a href="index.html" class="back-link">← View Website</a>
+  </header>
+
+  <main class="panel-shell">
+    <section id="loginView" class="login-card">
+      <p class="eyebrow">SECURE ACCESS</p>
+      <h1>Control Panel</h1>
+      <p>Log in to manage screenshots, videos, updates, and staff accounts.</p>
+      <label>Username<input id="username" autocomplete="username"></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password"></label>
+      <button id="loginButton" class="primary">Log In</button>
+      <p id="loginMessage" class="message"></p>
+    </section>
+
+    <section id="panelView" hidden>
+      <div class="panel-title">
+        <div><p class="eyebrow">ZERO HOUR RP</p><h1>Website Control Panel</h1><p id="roleText"></p></div>
+        <button id="logoutButton" class="ghost">Log Out</button>
+      </div>
+
+      <nav class="panel-tabs">
+        <button class="active" data-panel="mediaManager">Screenshots & Videos</button>
+        <button data-panel="updatesManager">Updates</button>
+        <button data-panel="staffManager" id="staffTab">Staff Accounts</button>
+        <button data-panel="publishManager">Publish to GitHub</button>
+      </nav>
+
+      <section class="manager active" id="mediaManager">
+        <div class="manager-heading"><div><h2>Media Manager</h2><p>Screenshots and videos are placed first, and both save into the same images/uploads folder.</p></div></div>
+        <div class="upload-grid">
+          <article class="upload-box">
+            <h3>Add Screenshots</h3>
+            <p>Supports PNG, JPG, JPEG, WebP, and GIF. You can select several at once.</p>
+            <input id="photoInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple>
+          </article>
+          <article class="upload-box">
+            <h3>Add Videos</h3>
+            <p>Supports MP4, WebM, and OGG. MP4 with H.264/AAC works best.</p>
+            <input id="videoInput" type="file" accept="video/mp4,video/webm,video/ogg" multiple>
+          </article>
+        </div>
+        <h3 class="subheading">Screenshots</h3>
+        <div id="galleryEditor" class="editor-grid"></div>
+        <h3 class="subheading">Videos</h3>
+        <div id="videoEditor" class="editor-grid"></div>
+      </section>
+
+      <section class="manager" id="updatesManager">
+        <div class="manager-heading"><div><h2>City Updates</h2><p>Add announcements and news cards.</p></div><button id="addUpdate" class="primary">Add Update</button></div>
+        <div id="updatesEditor" class="editor-list"></div>
+      </section>
+
+      <section class="manager" id="staffManager">
+        <div class="manager-heading"><div><h2>Staff Accounts</h2><p>Owner-only account management.</p></div><button id="addStaff" class="primary">Add Account</button></div>
+        <div id="staffEditor" class="editor-list"></div>
+      </section>
+
+      <section class="manager" id="publishManager">
+        <div class="manager-heading"><div><h2>Publish Changes</h2><p>GitHub Pages cannot let a browser permanently write into the repository by itself. This panel prepares the full updated website folder for you.</p></div></div>
+        <div class="publish-card">
+          <h3>Save Updated Website Folder</h3>
+          <p>This is the recommended method for screenshots and large videos. It avoids the browser ZIP memory error.</p>
+          <button id="saveFolderButton" class="primary">Save Complete Website Folder</button>
+        </div>
+        <div class="publish-card">
+          <h3>Reset Local Panel Draft</h3>
+          <p>Use this if deleted screenshots return or blank cards appear. It clears only the browser's saved draft and reloads the published site data.</p>
+          <button id="resetDraftButton" class="danger">Clear Saved Draft</button>
+        </div>
+        <p id="statusMessage" class="status"></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="site-data.js?v=1"></script>
+  <script src="panel-users.js"></script>
+  <script src="admin.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05070a">
+  <meta name="description" content="Zero Hour RP — serious 16+ FiveM roleplay with a connected economy, custom systems, careers, businesses, and fair staff.">
+  <title>Zero Hour RP | FiveM Roleplay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span>ZERO</span><b>HOUR</b><em>RP</em></a>
+    <button class="nav-toggle" aria-label="Open navigation">☰</button>
+    <nav>
+      <a href="#media">Media</a>
+      <a href="#features">Features</a>
+      <a href="#updates">Updates</a>
+      <a class="nav-discord" href="https://discord.gg/8rCsghjneQ" target="_blank" rel="noopener">Join Discord</a>
+      <a class="nav-panel" href="admin.html">Control Panel</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">NOW OPEN • 16+ SERIOUS ROLEPLAY</p>
+        <h1>YOUR STORY<br><span>STARTS AT ZERO.</span></h1>
+        <p class="hero-text">A connected economy, custom survival systems, player-owned businesses, meaningful careers, and a city where every dollar matters.</p>
+        <div class="hero-actions">
+          <a class="button primary" id="joinServerTop" href="#join">Join Server</a>
+          <a class="button secondary" href="https://discord.gg/8rCsghjneQ" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+      </div>
+
+      <aside class="join-card" id="join">
+        <div class="online"><span></span> ZERO HOUR RP</div>
+        <h2>Enter the city</h2>
+        <p>Connect directly when the join code is configured, or enter through Discord.</p>
+        <div class="join-details">
+          <div><small>AGE</small><strong>16+</strong></div>
+          <div><small>FRAMEWORK</small><strong>QBX</strong></div>
+          <div><small>STYLE</small><strong>SERIOUS RP</strong></div>
+        </div>
+        <a class="button primary full" id="connectButton" href="https://discord.gg/8rCsghjneQ" target="_blank" rel="noopener">Join Through Discord</a>
+        <small id="configNote">Add your Cfx.re join code in config.js for direct connection.</small>
+      </aside>
+    </section>
+
+    <section class="media-section" id="media">
+      <div class="section-heading">
+        <p class="eyebrow">SEE THE CITY FIRST</p>
+        <h2>Screenshots & videos</h2>
+        <p>Watch the systems, vehicles, and experiences players will find inside Zero Hour RP.</p>
+      </div>
+
+      <div class="media-tabs">
+        <button class="tab active" data-tab="screenshots">Screenshots</button>
+        <button class="tab" data-tab="videos">Videos</button>
+      </div>
+
+      <div id="screenshotsPanel" class="tab-panel active">
+        <div class="gallery" id="galleryGrid"></div>
+        <p class="empty-state" id="galleryEmpty">No screenshots have been posted yet.</p>
+      </div>
+
+      <div id="videosPanel" class="tab-panel">
+        <div class="videos-grid" id="videosGrid"></div>
+        <p class="empty-state" id="videosEmpty">No videos have been posted yet.</p>
+      </div>
+    </section>
+
+    <section class="features-section" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">BUILT DIFFERENT</p>
+        <h2>A city where systems connect</h2>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>Real Economy</h3><p>Money, taxes, fuel, food, jobs, and businesses are designed to matter.</p></article>
+        <article><span>02</span><h3>Player Businesses</h3><p>Own, manage, stock, and grow businesses that serve the whole city.</p></article>
+        <article><span>03</span><h3>Survival Systems</h3><p>Sleep, bladder, bowel, hunger, thirst, and other needs add immersion.</p></article>
+        <article><span>04</span><h3>Meaningful Careers</h3><p>Police, EMS, fire, mechanic, trucking, mining, delivery, and more.</p></article>
+        <article><span>05</span><h3>Custom Content</h3><p>Custom scripts, vehicles, clothing, interactions, and city features.</p></article>
+        <article><span>06</span><h3>Fair Community</h3><p>Respectful staff, consistent rules, and a place for every good story.</p></article>
+      </div>
+    </section>
+
+    <section class="updates-section" id="updates">
+      <div class="section-heading">
+        <p class="eyebrow">CITY NEWS</p>
+        <h2>Latest updates</h2>
+      </div>
+      <div class="updates-grid" id="updatesGrid"></div>
+    </section>
+
+    <section class="cta">
+      <p class="eyebrow">ZERO HOUR RP</p>
+      <h2>Be there from day one.</h2>
+      <p>Join a city where every dollar matters and every player deserves respect.</p>
+      <div class="hero-actions centered">
+        <a class="button primary" id="joinServerBottom" href="#join">Join Server</a>
+        <a class="button secondary" href="https://discord.gg/8rCsghjneQ" target="_blank" rel="noopener">Join Discord</a>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-panel" href="admin.html">🔒 <span><strong>ADMIN / STAFF</strong><small>Open Control Panel</small></span></a>
+
+  <footer>
+    <a class="brand" href="#home"><span>ZERO</span><b>HOUR</b><em>RP</em></a>
+    <p>16+ Serious FiveM Roleplay</p>
+    <small>Independent community. Not affiliated with Rockstar Games or Cfx.re.</small>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="site-data.js?v=1"></script>
+  <script src="site.js?v=1"></script>
+</body>
+</html>
